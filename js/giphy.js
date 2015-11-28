@@ -14,7 +14,6 @@ $(document).ready(function(){
       type: "get",
       dataType: "json"
     }).done(function(response){
-      $("body").append("<div>" + response.data + "</div>")
       $.each(response.data, function(index, image){
         $("body").append('<embed src="'+this.embed_url+'">')
         console.log(this)
